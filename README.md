@@ -1,2 +1,2 @@
 # realtime_poll_application
-It is a realt time polling and chatting application
+This is a real-time polling and chat application built using Node.js, Express, Socket.IO, and HTML/CSS/JavaScript.
