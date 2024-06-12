@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Polling App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="poll">
+            <h2>Vote Now!</h2>
+            <p>Choose a Favorite Sports</p>
+            <div id="pollOptions"></div>
+        </div>
+        <div class="chat">
+            <h2>Chat</h2>
+            <div id="chatMessages"></div>
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <div id="typingIndicator"></div>
+            <button id="sendButton">Send</button>
+            <button id="muteButton">Mute</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+</body>
+
+</html>

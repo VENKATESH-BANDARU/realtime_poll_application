@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.poll,
+.chat {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 45%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.poll:hover,
+.chat:hover {
+    transform: scale(1.02);
+}
+
+#pollOptions button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pollOptions button:hover {
+    background-color: #0056b3;
+}
+
+#chatMessages {
+    border: 1px solid #ccc;
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+#chatMessages div {
+    margin: 5px 0;
+    padding: 8px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatMessages div .message-content {
+    flex-grow: 1;
+    display: inline;
+}
+
+#chatMessages div .message-content strong {
+    margin-right: 3px;
+    /* Adjusts the space between username and message text */
+}
+
+#chatMessages div .button-container {
+    display: flex;
+    gap: 10px;
+    /* Space between buttons */
+}
+
+#chatMessages div .button-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chatMessages div .button-container button.edit {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+#chatMessages div .button-container button.delete {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+#chatMessages div .button-container button.edit:hover {
+    background-color: #ec971f;
+}
+
+#chatMessages div .button-container button.delete:hover {
+    background-color: #c9302c;
+}
+
+#typingIndicator {
+    color: #666;
+    font-size: 0.9em;
+    height: 1.5em;
+}
+
+#chatInput {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#muteButton {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #d900ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#sendButton {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#muteButton:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poll,
+    .chat {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .poll,
+    .chat {
+        padding: 15px;
+    }
+
+    #pollOptions button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #chatMessages {
+        height: 250px;
+    }
+}
